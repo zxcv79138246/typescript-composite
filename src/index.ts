@@ -33,3 +33,14 @@ composite2.add(house);
 composite2.add(rect2);
 composite2.draw(500, 10);
 console.log("composite2 area", composite2.area());
+
+let shapes: Array<Shape> = [];
+shapes.push(rect1);
+shapes.push(tri1);
+shapes.push(house);
+
+let totalArea = 0;
+shapes.map(shape => {
+  totalArea = totalArea + shape.area();
+});
+console.log("total area", totalArea);
