@@ -1,9 +1,9 @@
 import { Shape } from "./shape";
 
-export class Composite extends Shape {
+export class Composite implements Shape {
   private list: Array<Shape>;
+
   public constructor(public pointX = 0, public pointY = 0) {
-    super();
     this.list = [];
   }
 

@@ -1,5 +1,5 @@
 import { Shape } from "./shape";
-export class Triangle extends Shape {
+export class Triangle implements Shape {
   public height: number;
   public constructor(
     public pointX = 0,
@@ -8,7 +8,6 @@ export class Triangle extends Shape {
     public color = "#FFFFFF",
     private ctx: CanvasRenderingContext2D
   ) {
-    super();
     this.height = Math.sqrt(
       Math.pow(this.sideLength, 2) - Math.pow(this.sideLength / 2, 2)
     );

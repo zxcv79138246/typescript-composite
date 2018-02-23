@@ -1,5 +1,5 @@
 import { Shape } from "./shape";
-export class Rectangle extends Shape {
+export class Rectangle implements Shape {
   public constructor(
     public pointX = 0,
     public pointY = 0,
@@ -7,9 +7,7 @@ export class Rectangle extends Shape {
     public height: number,
     public color = "#FFFFFF",
     private ctx: CanvasRenderingContext2D
-  ) {
-    super();
-  }
+  ) {}
 
   public draw(drawX = this.pointX, drawY = this.pointY) {
     this.ctx.fillStyle = this.color;
